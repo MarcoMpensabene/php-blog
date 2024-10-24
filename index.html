@@ -9,6 +9,26 @@
 
 <body>
     <h1>BLOG</h1>
+
+    <form action="/login/login.php" method="post">
+        <label for="username">Username:</label>
+        <input id="username" name="username" type="text" required>
+
+        <label for="password">Password:</label>
+        <input id="password" name="password" type="password" required>
+
+        <input type="submit" name="login" value="Login">
+    </form>
+
+    <form action="/posts/create_post.php" method="post">
+        <label for="title">Titolo:</label>
+        <input id="title" name="title" type="text" required>
+
+        <label for="content">Contenuto:</label>
+        <textarea id="content" name="content" required></textarea>
+
+        <input type="submit" name="create_post" value="Crea Post">
+    </form>
 </body>
 
 </html>
