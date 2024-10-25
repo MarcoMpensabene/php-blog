@@ -6,7 +6,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
         $content = $_POST['content'];
         $author_id = $_SESSION['id'];
 
-        $mysqli = new mysqli("localhost", "username", "password", "php_blog");
+        $mysqli = new mysqli("localhost", "root", "root", "php_blog");
 
         if ($mysqli->connect_error) {
             die("Errore connessione: " . $mysqli->connect_error);

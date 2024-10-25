@@ -5,7 +5,7 @@ if (isset($_POST['login'])) {
     $password = $_POST['password'];
 
     // Connessione al DB
-    $mysqli = new mysqli("localhost", "username", "password", "php_blog");
+    $mysqli = new mysqli("localhost", "root", "root", "php_blog");
 
     if ($mysqli->connect_error) {
         die("Errore connessione: " . $mysqli->connect_error);
@@ -26,10 +26,10 @@ if (isset($_POST['login'])) {
             $_SESSION['username'] = $username;
             header("Location: dashboard.php");
         } else {
-            echo "Password errata!";
+            echo "Password errata";
         }
     } else {
-        echo "Utente non trovato!";
+        echo "Utente non esistente";
     }
 
     $query->close();
